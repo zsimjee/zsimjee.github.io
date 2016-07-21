@@ -18,7 +18,9 @@
 
 			$(document).ready(function() {
 				var pastDate = new Date();
-				var currentDate  = new Date('2016-07-23 17:30:00');
+				
+				var arr = "2016-07-23 17:30:00".split(/[- :]/);
+    			var currentDate = new Date(arr[0], arr[1]-1, arr[2], arr[3], arr[4], arr[5]);
 				var diff = currentDate.getTime() / 1000 - pastDate.getTime() / 1000;
 
 				clock = $('.clock').FlipClock(diff, {
