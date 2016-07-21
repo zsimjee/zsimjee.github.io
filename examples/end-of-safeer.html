@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../compiled/flipclock.css">
+		<link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="../compiled/flipclock.js"></script>	
+	</head>
+	<body>
+		<div class='title-text'>
+			<span class="end">End of Safeer</span>
+		</div>
+		<div class="clock-container">
+			<div class="clock" style="margin:2em;" auto;></div>
+		</div>
+		<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+				var pastDate = new Date();
+				var currentDate  = new Date('2016-07-23 17:30:00');
+				var diff = currentDate.getTime() / 1000 - pastDate.getTime() / 1000;
+
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter'
+				});
+				clock.setCountdown(true);
+			});
+		</script>
+		<style type="text/css">
+			body {   
+				background: url("http://www.semrawut.com/i/fire-hd-wallpaper.jpg") fixed center;
+				background-size: cover;
+ 
+			}
+			.clock-container, .title-text {
+		  		position: absolute;
+			   	left: 50%;
+			   	margin-right: -50%;
+			   	transform: translate(-50%, -0%)
+			}
+			.clock-container {
+			   	margin-top: 12em;
+			}
+			.title-text {
+			   	margin-top: 5em;
+			}
+			
+			.flip-clock-label, .inn, .end {
+				text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white !important;
+				font-size: 20;
+				font-weight: bold;
+				font-family: 'Metal Mania', cursive !important;
+			}
+			.end {
+				text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white !important;
+				font-size: 80;
+				font-weight: bold;
+				font-family: 'Metal Mania', cursive !important;
+			}
+		</style>
+	</body>
+</html>
