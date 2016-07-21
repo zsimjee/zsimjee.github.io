@@ -13,6 +13,9 @@
 		<div class="clock-container">
 			<div class="clock" style="margin:2em;" auto;></div>
 		</div>
+		<div class="gif-container">
+			<iframe src="https://giphy.com/embed/13CEBFHKjA284o" width="480" height="363" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+		</div>
 		<script type="text/javascript">
 			var clock;
 
@@ -35,7 +38,7 @@
 				background-size: cover;
  
 			}
-			.clock-container, .title-text {
+			.clock-container, .title-text, .gif-container {
 		  		position: absolute;
 			   	left: 50%;
 			   	margin-right: -50%;
@@ -48,6 +51,10 @@
 			   	margin-top: 5em;
 			}
 			
+			.gif-container {
+				margin-top: 22em;	
+			}
+
 			.flip-clock-label, .inn, .end {
 				text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white !important;
 				font-size: 20;
