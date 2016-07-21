@@ -33,7 +33,21 @@
 				});
 				clock.setCountdown(true);
 
-				widget.play();
+
+				SC.initialize({
+				  client_id: 'b05a4a8b3498e54ce292d6e259563240',
+				  redirect_uri: 'https://zsimjee.github.io/examples//callback.html'
+				});
+
+				SC.connect().then(function() {
+				  return SC.get('/me');
+				}).then(function(me) {
+				  alert('Hello, ' + me.username);
+				});
+				// // stream track id 293
+				// SC.stream('/tracks/293').then(function(player){
+				//   player.play();
+				// });
 			});
 		</script>
 		<style type="text/css">
@@ -72,6 +86,6 @@
 				font-family: 'Metal Mania', cursive !important;
 			}
 		</style>
-		<object data="mp3player.swf?autostart=true&playlist=playlist.xml" height="200" type="application/x-shockwave-flash" width="0"><param name="movie" value="mp3player.swf?autostart=false&playlist=THE-NAME-OF-YOUR-PLAYLIST-FILE.xml" /></object>
+		<!-- <object data="mp3player.swf?autostart=true&playlist=playlist.xml" height="200" type="application/x-shockwave-flash" width="0"><param name="movie" value="mp3player.swf?autostart=false&playlist=THE-NAME-OF-YOUR-PLAYLIST-FILE.xml" /></object> -->
 	</body>
 </html>
